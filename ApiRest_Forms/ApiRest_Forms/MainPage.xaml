@@ -10,8 +10,6 @@
                     <TextCell Text="{Binding Title}" Detail="{Binding Body}"></TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
     </StackLayout>
-
 </ContentPage>
