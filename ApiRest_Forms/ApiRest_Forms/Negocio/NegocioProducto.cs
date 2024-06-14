@@ -1,5 +1,7 @@
 ﻿using ApiRest_Forms.ApiModel;
+using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -10,6 +12,15 @@ namespace ApiRest_Forms.Negocio
     public class NegocioProducto
     {
         static HttpClient client = new HttpClient();
+
+        Apis api = new Apis();
+
+        public async Task<List<Producto>> ObtenerTodosLosProductos()
+        {
+            string url = await client.GetStringAsync(api.ObtenerProducto);
+            List<Producto> listaProductos = JsonConvert.DeserializeObject<List<Producto>>(url);
+            return listaProductos;
+        }
 
         static async Task<Uri> CreateProductAsync(Producto producto)
         {

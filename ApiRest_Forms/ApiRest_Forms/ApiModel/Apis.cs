@@ -16,7 +16,7 @@ namespace ApiRest_Forms.ApiModel
         {
             this.UrlPost = "https://jsonplaceholder.typicode.com/posts";
             this.HttpRequest = "";
-            this.ObtenerProducto = "/api/products/id";
+            this.ObtenerProducto = "http://192.168.70.164:45455/api/Productos?id=1";
             this.CrearProducto = "/api/products";
             this.ActualizarProducto = "/api/products/id";
             this.EliminarProducto = "/api/products/id";

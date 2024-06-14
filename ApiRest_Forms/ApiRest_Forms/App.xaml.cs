@@ -10,7 +10,7 @@ namespace ApiRest_Forms
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Mostrar();
         }
 
         protected override void OnStart()
